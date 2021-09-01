@@ -127,14 +127,14 @@ class MapController extends ControllerMVC {
   }
 
   void getDirectionSteps() async {
-    currentAddress = sett.myAddress.value;
+    currentAddress = await sett.getCurrentLocation();
     mapsUtil
         .get("origin=" +
             currentAddress.latitude.toString() +
             "," +
             currentAddress.longitude.toString() +
             "&destination=" +
-            currentOrder.deliveryAddress.longitude.toString() +
+            currentOrder.deliveryAddress.latitude.toString() +
             "," +
             currentOrder.deliveryAddress.longitude.toString() +
             "&key=${sett.setting.value?.googleMapsKey}")

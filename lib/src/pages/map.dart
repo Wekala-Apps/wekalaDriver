@@ -81,7 +81,7 @@ class _MapWidgetState extends StateMVC<MapWidget> {
       ),
       body: Stack(
         fit: StackFit.loose,
-        alignment: AlignmentDirectional.bottomStart,
+        alignment: AlignmentDirectional.topEnd,
         children: <Widget>[
           _con.cameraPosition == null
               ? CircularLoadingWidget(height: 0)
